@@ -1,0 +1,2493 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A global production pipeline for film and games">
+      
+      
+        <link rel="canonical" href="http://getavalon.github.io/1.0/">
+      
+      
+        <meta name="author" content="Marcus Ottosson">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.3">
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Source+Code+Pro" rel="stylesheet">
+
+    
+      
+        <title>  - Avalon</title>
+      
+    
+    
+      <script src="../assets/javascript/modernizr.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application.palette.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+      <script src="../assets/javascript/overrides.js"></script>
+    
+    
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="http://getavalon.github.io" title="Avalon" class="md-logo md-header-nav__button">
+            <img src="../assets/images/logo.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <label class="custom-select">
+                  <span class="md-header-nav__parent">
+                    <select id="version-selector">
+                      <option hidden selected value="none"></option>
+                      <option value="1.0">1.0</option>
+                      <option value="2.0">2.0</option>
+                    </select>
+                  </span>
+                </label>
+              
+            
+             
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/getavalon/core" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      avalon/core
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="1.0" class="md-tabs__link md-tabs__link--active">
+          1.0
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../2.0/" title="2.0" class="md-tabs__link">
+          2.0
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../polly/" title="Polly" class="md-tabs__link">
+          Polly
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../colorbleed/" title="Colorbleed" class="md-tabs__link">
+          Colorbleed
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+  
+    <div style="display: none" class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../assets/images/logo.png">
+      </i>
+    
+    Avalon
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/getavalon/core" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      avalon/core
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      1.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        1.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+         
+      </label>
+    
+    <a href="./" title=" " class="md-nav__link md-nav__link--active">
+       
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-audience" title="Target Audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="Update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customisation" title="Customisation" class="md-nav__link">
+    Customisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-this-guide" title="How to read this guide" class="md-nav__link">
+    How to read this guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batteries" title="Batteries" class="md-nav__link">
+    Batteries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creator" title="Creator" class="md-nav__link">
+    Creator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loader" title="Loader" class="md-nav__link">
+    Loader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manager" title="Manager" class="md-nav__link">
+    Manager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" title="API" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminology" title="Terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-api" title="Terminal API" class="md-nav__link">
+    Terminal API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystem-api" title="Filesystem API" class="md-nav__link">
+    Filesystem API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-hierarchy" title="Information Hierarchy" class="md-nav__link">
+    Information Hierarchy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-public-and-stage" title="Private, Public and Stage" class="md-nav__link">
+    Private, Public and Stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" title="ls()" class="md-nav__link">
+    ls()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" title="Schema" class="md-nav__link">
+    Schema
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assetjson" title="asset.json" class="md-nav__link">
+    asset.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsetjson" title="subset.json" class="md-nav__link">
+    subset.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionjson" title="version.json" class="md-nav__link">
+    version.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representationjson" title="representation.json" class="md-nav__link">
+    representation.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containerjson" title="container.json" class="md-nav__link">
+    container.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbender-api" title="Mindbender API" class="md-nav__link">
+    Mindbender API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-api" title="Host API" class="md-nav__link">
+    Host API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract" title="Contract" class="md-nav__link">
+    Contract
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mindbendermodel" title="mindbender.model" class="md-nav__link">
+    mindbender.model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderrig" title="mindbender.rig" class="md-nav__link">
+    mindbender.rig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderanimation" title="mindbender.animation" class="md-nav__link">
+    mindbender.animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderlookdev" title="mindbender.lookdev" class="md-nav__link">
+    mindbender.lookdev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      2.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        2.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/" title=" " class="md-nav__link">
+       
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/guides/" title="Guides" class="md-nav__link">
+      Guides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/tutorials/" title="Tutorials" class="md-nav__link">
+      Tutorials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/reference/" title="Reference" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/tools/" title="Tools" class="md-nav__link">
+      Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Polly
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Polly
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../polly/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../polly/assets/" title="Assets" class="md-nav__link">
+      Assets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../polly/tutorials/" title="Tutorials" class="md-nav__link">
+      Tutorials
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Colorbleed
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Colorbleed
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../colorbleed/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-audience" title="Target Audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="Update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customisation" title="Customisation" class="md-nav__link">
+    Customisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-this-guide" title="How to read this guide" class="md-nav__link">
+    How to read this guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batteries" title="Batteries" class="md-nav__link">
+    Batteries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creator" title="Creator" class="md-nav__link">
+    Creator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loader" title="Loader" class="md-nav__link">
+    Loader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manager" title="Manager" class="md-nav__link">
+    Manager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" title="API" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminology" title="Terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-api" title="Terminal API" class="md-nav__link">
+    Terminal API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filesystem-api" title="Filesystem API" class="md-nav__link">
+    Filesystem API
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-hierarchy" title="Information Hierarchy" class="md-nav__link">
+    Information Hierarchy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-public-and-stage" title="Private, Public and Stage" class="md-nav__link">
+    Private, Public and Stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ls" title="ls()" class="md-nav__link">
+    ls()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema" title="Schema" class="md-nav__link">
+    Schema
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assetjson" title="asset.json" class="md-nav__link">
+    asset.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subsetjson" title="subset.json" class="md-nav__link">
+    subset.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionjson" title="version.json" class="md-nav__link">
+    version.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representationjson" title="representation.json" class="md-nav__link">
+    representation.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containerjson" title="container.json" class="md-nav__link">
+    container.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbender-api" title="Mindbender API" class="md-nav__link">
+    Mindbender API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-api" title="Host API" class="md-nav__link">
+    Host API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract" title="Contract" class="md-nav__link">
+    Contract
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mindbendermodel" title="mindbender.model" class="md-nav__link">
+    mindbender.model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderrig" title="mindbender.rig" class="md-nav__link">
+    mindbender.rig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderanimation" title="mindbender.animation" class="md-nav__link">
+    mindbender.animation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindbenderlookdev" title="mindbender.lookdev" class="md-nav__link">
+    mindbender.lookdev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+        </div>
+      </div>
+    </div>
+  
+
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mindbender">Mindbender</h1>
+<div style="text-align: center">
+    <img src="https://user-images.githubusercontent.com/2152766/27349489-58285f06-55ef-11e7-9229-b89320eae405.png">
+    <p style="margin: 0">The safe post-production pipeline</p>
+</div>
+
+<p><br>
+<br></p>
+<ul>
+<li>
+<p><strong>Keywords:</strong> Film, games, content creation, pipeline</p>
+</li>
+<li>
+<p><strong>Objective:</strong></p>
+<ol>
+<li>Provide a unified framework within which artists at Mindbender may work efficiently.</li>
+<li>Enable extending of said framework for future improvements and unique requirements.</li>
+<li>Inspire further expansion upon a series of basic ideas.</li>
+</ol>
+</li>
+<li>
+<p><strong>Requirements:</strong> Core functionality must be editable and extensible by the technical director.</p>
+</li>
+<li>
+<p><strong>Technology:</strong> Mindbender is built upon <a href="http://pyblish.com">Pyblish</a>, <a href="https://www.python.org">Python</a> and <a href="https://github.com/mottosso/Qt.py">bindings</a> for <a href="https://qt.io">Qt</a>, and depends upon a Windows, Linux or MacOS operating system with <a href="http://www.autodesk.com/maya">Autodesk Maya</a>, <a href="https://www.thefoundry.co.uk/products/nuke/">The Foundry Nuke</a>, <a href="https://www.sidefx.com/">SideFX Houdini</a> and other DCC content creation applications.</p>
+</li>
+</ul>
+<p><br>
+<br></p>
+<h3 id="target-audience">Target Audience</h3>
+<p>To make the most out of this document, some knowledge and experience is assumed.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">minimal</th>
+<th align="left">recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>title</strong></td>
+<td align="left">technical director</td>
+<td align="left">pipeline technical director</td>
+</tr>
+<tr>
+<td align="left"><strong>experience</strong></td>
+<td align="left">1 year in advertisements or games</td>
+<td align="left">5+ years in feature film</td>
+</tr>
+<tr>
+<td align="left"><strong>software</strong></td>
+<td align="left">windows, linux or macos</td>
+<td align="left">maya</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br>
+<br>
+<br></p>
+<h3 id="introduction">Introduction</h3>
+<p>Welcome to mindbender-core, the production pipeline at <a href="http://mindbender.se">Mindbender Animation Studio</a>.</p>
+<p><br></p>
+<p><strong>Table of contents</strong></p>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#update">Update</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#description">Description</a></li>
+<li><a href="#batteries">Batteries</a><ul>
+<li><a href="#creator">Creator</a></li>
+<li><a href="#loader">Loader</a></li>
+<li><a href="#manager">Manager</a></li>
+</ul>
+</li>
+<li><a href="#api">API</a><ul>
+<li><a href="#terminology">Terminology</a></li>
+<li><a href="#filesystem-api">Filesystem API</a><ul>
+<li><a href="#information-hierarchy">Information Hierarchy</a></li>
+<li><a href="#private-public-and-stage">Private, Public and Stage</a></li>
+<li><a href="#ls"><code class="codehilite"><span class="n">ls</span><span class="p">()</span></code></a></li>
+<li><a href="#assetjson"><code class="codehilite"><span class="n">asset</span><span class="p">.</span><span class="n">json</span></code></a></li>
+<li><a href="#versionjson"><code class="codehilite"><span class="k">version</span><span class="p">.</span><span class="n">json</span></code></a></li>
+<li><a href="#subsetjson"><code class="codehilite"><span class="n">subset</span><span class="p">.</span><span class="n">json</span></code></a></li>
+<li><a href="#representationjson"><code class="codehilite"><span class="n">representation</span><span class="p">.</span><span class="n">json</span></code></a></li>
+<li><a href="#containerjson"><code class="codehilite"><span class="n">container</span><span class="p">.</span><span class="n">json</span></code></a></li>
+</ul>
+</li>
+<li><a href="#mindbender-api">Mindbender API</a></li>
+<li><a href="#host-api">Host API</a></li>
+</ul>
+</li>
+<li><a href="#contract">Contract</a><ul>
+<li><a href="#avalonmodel"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">model</span></code></a></li>
+<li><a href="#avalonrig"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">rig</span></code></a></li>
+<li><a href="#avalonanimation"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">animation</span></code></a></li>
+<li><a href="#avalonlookdev"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">lookdev</span></code></a></li>
+</ul>
+</li>
+<li><a href="#homework">Homework</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li>Help</li>
+</ul>
+<p><br>
+<br></p>
+<h3 id="features">Features</h3>
+<p>This project currently boasts the following features.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Feature</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><strong>Open Source</strong></td>
+<td align="left">Anyone can take part in testing, using and developing the pipeline on <a href="https://github.com/getavalon">GitHub</a>.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18760901/d6bf24b4-80fa-11e6-8880-7a0e927c8c27.png" /></td>
+<td align="left"><strong>Version Control</strong></td>
+<td align="left">Entire pipeline is <a href="https://github.com/getavalon/core/pulls?q=is%3Apr+is%3Aclosed">reviewed</a> and <a href="https://travis-ci.org/getavalon/core">tested</a> prior to any change being made.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /></td>
+<td align="left"><strong>Issue Tracker</strong></td>
+<td align="left">Feature requests, bugs and questions are reported, assigned and solved openly.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><strong>Single-command install and update via Git</strong></td>
+<td align="left">Zero dependencies make for easy install and updates.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18759916/b2e3161c-80f6-11e6-9e0a-c959d63047a8.png" /></td>
+<td align="left"><strong>Environment management</strong></td>
+<td align="left">The developer manages the environment without distrupting the end user</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18759918/b479168e-80f6-11e6-8d1c-aee4e654d335.png" /></td>
+<td align="left"><strong>Directory management</strong></td>
+<td align="left">Folders are automatically created as per the developers setup.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><strong>Application launcher</strong></td>
+<td align="left">Control over which version of which software is launched along with its initial configuration.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808940/eee150bc-8267-11e6-862f-a31e38d417af.png" /></td>
+<td align="left"><strong>Asset versioning</strong></td>
+<td align="left">Every asset, including shots, are explicitly versioned - e.g. v001, v034</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><strong>Asset subsets</strong></td>
+<td align="left">Each asset, such as <code class="codehilite"><span class="n">Tarzan</span></code>, contains one or more subsets, such as <code class="codehilite"><span class="n">model</span></code>, <code class="codehilite"><span class="n">rig</span></code> and <code class="codehilite"><span class="n">look</span></code>.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18835951/9dbaf5d2-83f5-11e6-9ea4-fbbb5f1d0e13.png" /></td>
+<td align="left"><strong>Asset and shot uniformity</strong></td>
+<td align="left">Shots are assets too.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><strong>Per project/shot settings</strong></td>
+<td align="left">Globally configure the framerate of a given project.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18836255/163d70a6-83f7-11e6-94b7-2f65a2c3b53b.png" /></td>
+<td align="left"><strong>Per family publishing of assets</strong></td>
+<td align="left">Individually manage the validation and export assets of specific types, such as <code class="codehilite"><span class="n">model</span></code>, <code class="codehilite"><span class="n">rig</span></code> and <code class="codehilite"><span class="n">animation</span></code>.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18836254/163d1124-83f7-11e6-9575-05a523a364fb.png" /></td>
+<td align="left"><strong>Per family loading of assets</strong></td>
+<td align="left">Individually manage loading of the same specific types of assets.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18759918/b479168e-80f6-11e6-8d1c-aee4e654d335.png" /></td>
+<td align="left"><strong>Asset Metadata</strong></td>
+<td align="left">Relevant information is stored alongside each published version</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18760901/d6bf24b4-80fa-11e6-8880-7a0e927c8c27.png" /></td>
+<td align="left"><strong>Tools</strong></td>
+<td align="left">Graphical user interfaces for Creating, Publishing, Loading and Managing assets</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><strong>Menus</strong></td>
+<td align="left">Application menus for modeling, rigging and animation</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><strong>Support for off-site freelancers/studios</strong></td>
+<td align="left">No dependence on the local environment, the pipeline can be installed anywhere.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /></td>
+<td align="left"><strong>Support for Qt 4 and Qt 5 bindings</strong></td>
+<td align="left">Transparently uses the most desirable binding of Qt wherever the pipeline is used.</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="install">Install</h3>
+<p>Mindbender takes the form of a "git" repository. Therefore, you will need to install <a href="https://git-scm.com/">Git</a>. Once installed, open up a terminal (Start &gt; "cmd" &gt; Enter) and type this in.</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/mindbender-studio/setup mindbender-setup --recursive
+$ <span class="nb">cd</span> mindbender-setup
+$ git checkout <span class="m">1</span>.0 -b <span class="m">1</span>.0
+$ git submodule update
+$ start .
+</pre></div>
+
+<p>Windows Explorer appears! Double-click <code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> and off you go!</p>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/2152766/22154279/2c4011ee-df2b-11e6-899a-faf7d4e597f4.png" /></p>
+<p><img alt="untitled" src="https://cloud.githubusercontent.com/assets/2152766/22067559/152dbc08-dd92-11e6-9a37-879a0d0ab445.gif" /></p>
+<p><strong>Congratulations!</strong></p>
+<p>You are now fully equipped to handle Mindbender tasks!</p>
+<p><strong>Next Step</strong></p>
+<ul>
+<li><a href="#update">Update</a></li>
+<li><a href="#customisation">Customisation</a></li>
+<li><a href="#contract">Workflow</a></li>
+</ul>
+<p><br>
+<br></p>
+<h3 id="update">Update</h3>
+<p>To update mindbender-setup, run the <code class="codehilite"><span class="k">update</span><span class="p">.</span><span class="n">bat</span></code> file supplied within the <code class="codehilite"><span class="n">mindbender</span><span class="o">-</span><span class="n">setup</span></code> directory.</p>
+<p>Alternatively, you may type this.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> mindbender-setup
+$ git pull
+$ git submodule update --recursive
+</pre></div>
+
+<p>It is safe to run these as many times as you'd like.</p>
+<p><br>
+<br></p>
+<h3 id="customisation">Customisation</h3>
+<p>The above is all that is required to get started with the Mindbender Pipeline. If you are at home and are just looking to try things out, feel free to play around. Create a few assets, publish them and familiarise yourself with the <a href="#contract">workflow</a>.</p>
+<p>If you are at a studio, you will likely want to use your own projects with the Mindbender Launcher.</p>
+<p>The next step is telling <code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> about your local projects. From your terminal, type this.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> mindbender-setup
+$ notepad mb.bat
+</pre></div>
+
+<p>Notepad appears.</p>
+<p>At the bottom of this file, replace <code class="codehilite"><span class="c">%REPLACE_ME%</span></code> with the absolute path to where your projects are located, such as <code class="codehilite"><span class="n">m</span><span class="p">:</span><span class="err">\</span><span class="n">f03_projects</span></code>. Now type <code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> again to access your own projects. Optionally, you may also create a shortcut of <code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> to your Desktop, Start Menu or any location you prefer.</p>
+<p><br>
+<br></p>
+<h3 id="usage">Usage</h3>
+<p>Mindbender is initialised by calling <code class="codehilite"><span class="n">install</span><span class="p">()</span></code> with an interface for your host.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">maya</span>
+<span class="n">api</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">maya</span><span class="p">)</span>
+</pre></div>
+
+<p><strong>Supported hosts</strong></p>
+<ul>
+<li><a href=""><code class="codehilite"><span class="n">maya</span></code></a></li>
+<li><a href=""><code class="codehilite"><span class="n">nuke</span></code></a></li>
+<li><a href=""><code class="codehilite"><span class="n">houdini</span></code></a></li>
+</ul>
+<p>From here, you model, rig and animate as per the <a href="#contract">contract</a> below.</p>
+<p><br>
+<br></p>
+<h3 id="how-to-read-this-guide">How to read this guide</h3>
+<p>Here are a few of the conventions used throughout this guide.</p>
+<ul>
+<li><strong>bold</strong> words are used to augment important aspects of a sentence</li>
+<li>UPPERCASE words are unique terminology, each detailed under <a href="#terminology">Terminology</a> below.</li>
+<li>(1), (2) are used to division important aspects in a sentence.</li>
+<li><code class="codehilite"><span class="n">code</span></code> is used to highlight words that occur in code.</li>
+</ul>
+<p><br>
+<br></p>
+<h3 id="description">Description</h3>
+<p>Mindbender is a content creation studio focusing on photo-realistic, yet exaggerated cartoons. They work across continents in Sweden, Brazil and Spain and therefore require an underlying pipeline that facilitate these activities.</p>
+<p>Pyblish Mindbender works exclusively with computer generated imagery - which means no focus is put on video, sound or the integration of 3d and live action footage. It has been designed for use both locally and remotely, to bridge the gap between artists working together but in different locations.</p>
+<p><strong>Overview</strong></p>
+<p>This pipeline covers the entire pipeline at Mindbender, including asset and shot creation. A PROJECT is partitioned into SHOTs where each shot consists of one or more ASSETs.</p>
+<p>This pipeline includes tools and Pyblish plug-ins for 4 common types of ASSETs in a typical production pipeline.</p>
+<ul>
+<li>Modeling</li>
+<li>Rigging</li>
+<li>Animation</li>
+<li>Look</li>
+</ul>
+<p>These implement <strong>(1)</strong> a contract for each FAMILY of ASSETs and <strong>(2)</strong> their interface towards each other.</p>
+<p><br>
+<br></p>
+<h3 id="batteries">Batteries</h3>
+<p>Mindbender hosts a series of <a href="#batteries">graphical user interfaces</a> that aid the user in conforming to the specified <a href="#contracts">contracts</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Purpose</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>creator</strong></td>
+<td align="left">control what goes out</td>
+<td align="left">Manage how data is outputted from an application.</td>
+</tr>
+<tr>
+<td align="left"><strong>loader</strong></td>
+<td align="left">control what goes in</td>
+<td align="left">Keep tabs on where data comes from so as to enable tracking and builds.</td>
+</tr>
+<tr>
+<td align="left"><strong>manager</strong></td>
+<td align="left">stay up to date</td>
+<td align="left">Notification and visualisation of loaded data.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314626/a8a3b72e-283f-11e7-90fd-3fa76e75276e.png"></p>
+<h4 id="creator">Creator</h4>
+<p>Associate content with a family.</p>
+<p>The family is what determins how the content is handled throughout your pipeline and tells Pyblish what it should look like when valid.</p>
+<p><strong>API</strong></p>
+<p>The creator respects families registered with Mindbender.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">register_family</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my.family&quot;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;My custom family&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+<p>For each family, a <strong>common set of data</strong> is automatically associated with the resulting instance.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;pyblish.mindbender.instance&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">chosen</span> <span class="n">family</span><span class="p">}</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">chosen</span> <span class="n">name</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>Additional common</strong> data can be added.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">register_data</span><span class="p">(</span>
+    <span class="n">key</span><span class="o">=</span><span class="s2">&quot;myKey&quot;</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="s2">&quot;My value&quot;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s2">&quot;A special key&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+<p>Data may be <strong>associated</strong> with a family.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">api</span><span class="o">.</span><span class="n">register_family</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my.family&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;marcus&quot;</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Your name&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">:</span> <span class="s2">&quot;Your age&quot;</span><span class="p">},</span>
+<span class="p">])</span>
+</pre></div>
+
+<p><br>
+<br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314676/6405898e-2840-11e7-9a09-3a193d6eaf1f.png"></p>
+<h4 id="loader">Loader</h4>
+<p>Visualise results from <code class="codehilite"><span class="n">api</span><span class="p">.</span><span class="n">ls</span><span class="p">()</span></code>.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">ls</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">asset</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</pre></div>
+
+<p><strong>API</strong></p>
+<p>The results from <code class="codehilite"><span class="n">api</span><span class="p">.</span><span class="n">ls</span><span class="p">()</span></code> depends on the currently <strong>registered root</strong>.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+<span class="n">api</span><span class="o">.</span><span class="n">register_root</span><span class="p">(</span><span class="s2">&quot;/projects/gravity&quot;</span><span class="p">)</span>
+</pre></div>
+
+<p>The chosen <code class="codehilite"><span class="n">ASSET</span></code> is passed to the <code class="codehilite"><span class="k">load</span><span class="p">()</span></code> function of the currently registered host.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">maya</span>
+<span class="n">api</span><span class="o">.</span><span class="n">register_host</span><span class="p">(</span><span class="n">maya</span><span class="p">)</span>
+</pre></div>
+
+<p>A host is automatically registered on <code class="codehilite"><span class="n">api</span><span class="p">.</span><span class="n">install</span><span class="p">()</span></code>.</p>
+<p><br>
+<br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314689/8b80cc58-2840-11e7-9bee-a97a40fa830d.png"></p>
+<h4 id="manager">Manager</h4>
+<p>Visualise loaded assets.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">maya</span>
+
+<span class="k">for</span> <span class="n">container</span> <span class="ow">in</span> <span class="n">maya</span><span class="o">.</span><span class="n">ls</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">container</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+<span class="c1"># The same is true for any host; houdini, nuke etc.</span>
+</pre></div>
+
+<p><strong>API</strong></p>
+<p>The results from <code class="codehilite"><span class="n">ls</span><span class="p">()</span></code> depends on the currently registered host, such as Maya.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">nuke</span>
+<span class="n">api</span><span class="o">.</span><span class="n">register_host</span><span class="p">(</span><span class="n">nuke</span><span class="p">)</span>
+</pre></div>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h2 id="api">API</h2>
+<p>Mindbender exposes a series of interrelated APIs to the end-user.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#terminal-api"><strong>Terminal API</strong></a></td>
+<td align="left">Defines how the <strong>artist</strong> interacts with <strong>tasks</strong></td>
+</tr>
+<tr>
+<td align="left"><a href="#filesystem-api"><strong>Filesystem API</strong></a></td>
+<td align="left">Defines how the <strong>developer</strong> interact with <strong>data</strong> on disk</td>
+</tr>
+<tr>
+<td align="left"><a href="#mindbender-api"><strong>Mindbender API</strong></a></td>
+<td align="left">Defines how the <strong>developer</strong> interacts with <strong>Mindbender</strong></td>
+</tr>
+<tr>
+<td align="left"><a href="#host-api"><strong>Host API</strong></a></td>
+<td align="left">Defines how the <strong>host</strong> interacts with <strong>Mindbender</strong></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="terminology">Terminology</h3>
+<p>Mindbender reserves the following words for private and public use. Public members are exposed to the user, private ones are internal to the implementation.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Term</th>
+<th align="left">Public</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18760901/d6bf24b4-80fa-11e6-8880-7a0e927c8c27.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">PROJECTS</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">Parent of projects</td>
+<td align="left"><code class="codehilite"><span class="n">m</span><span class="p">:</span><span class="err">\</span><span class="n">f03_projects</span></code></td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18760901/d6bf24b4-80fa-11e6-8880-7a0e927c8c27.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">PROJECT</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">Root of information</td>
+<td align="left">Gravity, Dr. Strange</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">ASSET</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">Unit of data</td>
+<td align="left">Ryan, Bicycle, Flower pot</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><code class="codehilite"><span class="k">VERSION</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">An ASSET iteration</td>
+<td align="left">v1, v034</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18759916/b2e3161c-80f6-11e6-9e0a-c959d63047a8.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">REPRESENTATION</span></code></td>
+<td align="left"></td>
+<td align="left">A data format</td>
+<td align="left">Maya file, pointcache, thumbnail</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18759918/b479168e-80f6-11e6-8d1c-aee4e654d335.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">FORMAT</span></code></td>
+<td align="left"></td>
+<td align="left">A file extension</td>
+<td align="left"><code class="codehilite"><span class="na">.ma</span></code>, <code class="codehilite"><span class="na">.abc</span></code>, <code class="codehilite"><span class="na">.ico</span></code>, <code class="codehilite"><span class="na">.png</span></code></td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">FAMILY</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">A type of ASSET</td>
+<td align="left"><code class="codehilite"><span class="n">model</span></code>, <code class="codehilite"><span class="n">rig</span></code>, <code class="codehilite"><span class="n">look</span></code>, <code class="codehilite"><span class="n">animation</span></code></td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808940/eee150bc-8267-11e6-862f-a31e38d417af.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">WORKSPACE</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">Private data</td>
+<td align="left">Scenefile for v034 of Ryan</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808940/eee150bc-8267-11e6-862f-a31e38d417af.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">SILO</span></code></td>
+<td align="left"></td>
+<td align="left">Data repository</td>
+<td align="left">Ryan resides in <code class="codehilite"><span class="n">assets</span></code>, caches in <code class="codehilite"><span class="n">film</span></code>.</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">INSTANCE</span></code></td>
+<td align="left"></td>
+<td align="left">Inverse of a file</td>
+<td align="left"><code class="codehilite"><span class="n">modelDefault_SET</span></code></td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18835951/9dbaf5d2-83f5-11e6-9ea4-fbbb5f1d0e13.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">STAGE</span></code></td>
+<td align="left"></td>
+<td align="left">Transient data</td>
+<td align="left">Outgoing VERSION from scenefile</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18808939/eeded22e-8267-11e6-9fcb-150208d55764.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">SHARED</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">X</span></code></td>
+<td align="left">Public data</td>
+<td align="left">v034 of Ryan</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18836255/163d70a6-83f7-11e6-94b7-2f65a2c3b53b.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">PRODUCER</span></code></td>
+<td align="left"></td>
+<td align="left">Creator of data</td>
+<td align="left">You</td>
+</tr>
+<tr>
+<td align="left"><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/18836254/163d1124-83f7-11e6-9575-05a523a364fb.png" /></td>
+<td align="left"><code class="codehilite"><span class="n">CONSUMER</span></code></td>
+<td align="left"></td>
+<td align="left">User of data</td>
+<td align="left">Me</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="terminal-api">Terminal API</h3>
+<p><code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> (pronounced "embee-bat") is the Mindbender Launcher. It is how artists launch applications, such as Maya and Nuke. It establishes important environment variables used when producing and publishing data, along with exposing artists to tools relevant a given project.</p>
+<p><img alt="untitled" src="https://cloud.githubusercontent.com/assets/2152766/22065809/2960e216-dd8a-11e6-9bf4-435a8c25f98c.gif" /></p>
+<p><br></p>
+<p><strong>project.bat</strong></p>
+<p><code class="codehilite"><span class="n">mb</span><span class="p">.</span><span class="n">bat</span></code> is where artists enter the pipeline. A user may then enter any of the available projects, via a <code class="codehilite"><span class="n">project</span><span class="p">.</span><span class="n">bat</span></code> file.</p>
+<p>The project file is located in your PROJECTS directory</p>
+<div class="codehilite"><pre><span></span>@echo off
+call _mkproject %~dp0 %~n0 %1
+</pre></div>
+
+<p><strong>asset.bat</strong></p>
+<div class="codehilite"><pre><span></span>@echo off
+call _mkproject %~dp0 %~n0 %1
+</pre></div>
+
+<p>The layout is as follows.</p>
+<ol>
+<li><code class="codehilite"><span class="err">{</span><span class="n">PROJECT</span><span class="err">}</span></code> (with TAB-completion)</li>
+<li><code class="codehilite"><span class="err">{</span><span class="n">ASSET</span><span class="err">}</span></code> or Shot (with TAB-COMPLETION)</li>
+<li><code class="codehilite"><span class="err">{</span><span class="n">APPLICATION</span><span class="err">}</span></code> <code class="codehilite"><span class="err">{</span><span class="n">TASK</span><span class="err">}</span></code></li>
+</ol>
+<p>The given TASK is automatically created, unless it already exists.</p>
+<p><strong>Environment variables</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">PROJECT</span></code></td>
+<td align="left">Nice name of PROJECT, e.g. Gifts for Greta</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">PROJECTDIR</span></code></td>
+<td align="left">Absolute path to PROJECT, e.g. m:\f01_projects\p999_Gifts_for_Greta</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ROOT</span></code></td>
+<td align="left">Top level directory of either shot or asset, e.g. ..\Greta</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="filesystem-api">Filesystem API</h3>
+<p>Data is organised into <strong>files</strong> and <strong>folders</strong>.</p>
+<p>Some files and folders have special meaning in Mindbender.</p>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/2152766/18836965/03e2f018-83fa-11e6-81d5-2dcfa19c43ab.png" /></p>
+<p><br></p>
+<h4 id="information-hierarchy">Information Hierarchy</h4>
+<p>The mental and physical model for files and folders look like this.</p>
+<p><img alt="temp_03" src="https://cloud.githubusercontent.com/assets/2152766/18833936/1aba9bba-83eb-11e6-812c-2104f7bb3e2a.png" /></p>
+<p><br>
+<br></p>
+<h4 id="private-public-and-stage">Private, Public and Stage</h4>
+<p>During the course of the creation of any ASSET, data moves between 2 of 3 states.</p>
+<p><img alt="temp" src="https://cloud.githubusercontent.com/assets/2152766/18838199/798a132e-83fe-11e6-8c1f-f515978d6ce2.png" /></p>
+<ul>
+<li>The pipeline does not take into consideration the workspace and is therefore <strong>workspace-agnostic</strong>. </li>
+<li>The <strong>staging area</strong> is both implicit and transparent to the PRODUCER and CONSUMER, except for debugging purposes. This is where automatic/scheduled garbage collection may run to optimise for space constraints.</li>
+<li>The <strong>shared space</strong> is where ASSETs ultimately reside once published.</li>
+</ul>
+<p><br></p>
+<p><strong>Private and Public separation</strong></p>
+<p>A naive approach to content creation might be to refer to ASSETs straight from another artists workspace. At Mindbender, data is separated between work-in-progress (private) and data exposed to others (public).</p>
+<p>Private data resides in <code class="codehilite"><span class="k">work</span></code>, public data resides in <code class="codehilite"><span class="n">publish</span></code>.</p>
+<p><img alt="" src="https://cloud.githubusercontent.com/assets/2152766/22207956/15071c7a-e179-11e6-90ba-dd529c8cda6e.png" /></p>
+<p>Private data is highly <strong>mutable</strong> and typically <strong>private</strong> to an individual artist.</p>
+<ul>
+<li><strong>Mutable</strong> implies transient data that is likely to change at any given moment.</li>
+<li><strong>Private</strong> implies personal, highly irregular and likely invalid data.</li>
+</ul>
+<p>Public data on the other hand is <strong>immutable</strong>, <strong>correct</strong> and <strong>impersonal</strong>.</p>
+<ul>
+<li><strong>Immutable</strong> implies that the data may be dependent upon by other data.</li>
+<li><strong>Correct</strong> implies passing validation of the associated family.</li>
+<li><strong>Impersonal</strong> implies following strict organisational conventions.</li>
+</ul>
+<p><br>
+<br></p>
+<p>Each <strong><a href="#assetjson">ASSET</a></strong> reside within a top-level ROOT and SILO directory as follows.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Hierarchy</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="hasset" src="https://cloud.githubusercontent.com/assets/2152766/22207956/15071c7a-e179-11e6-90ba-dd529c8cda6e.png" /></td>
+<td align="left"><img alt="hassetex" src="https://cloud.githubusercontent.com/assets/2152766/22207927/fec8e434-e178-11e6-9c0b-ac41ce076211.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Each ASSET contains a <code class="codehilite"><span class="k">work</span></code> and <code class="codehilite"><span class="n">publish</span></code> directory. <code class="codehilite"><span class="k">work</span></code> is where artists save their own files while working, whereas <code class="codehilite"><span class="n">publish</span></code> is where published files go.</p>
+<p>The <code class="codehilite"><span class="n">publish</span></code> directory contains 0 or more <strong><a href="#subsetjson">SUBSETS</a></strong> which in turn contains 0 or more <strong><a href="#versionjson">VERSIONS</a></strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Hierarchy</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="hsubset" src="https://cloud.githubusercontent.com/assets/2152766/22208171/d6f6b322-e179-11e6-9676-9afaae280ed4.png" /></td>
+<td align="left"><img alt="hsubsetex" src="https://cloud.githubusercontent.com/assets/2152766/22208200/eecfe478-e179-11e6-9a8c-f70f02d7e74d.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Each VERSION contains 1 or more <strong><a href="#representationjson">REPRESENTATIONS</a></strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="hrepresentationex" src="https://cloud.githubusercontent.com/assets/2152766/22208262/2ecdf0a6-e17a-11e6-9b86-2516231d906e.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>All data is written in 3 stages.</p>
+<ol>
+<li>To a local <code class="codehilite"><span class="o">/</span><span class="n">temp</span></code> directory.</li>
+<li>To a "staging" directory</li>
+<li>To the final destination.</li>
+</ol>
+<p>Data is first written locally, so as to not burden a potentially remote filesystem with sporadic writes performed by an application - for example, caching may be bound by parsing of geometry, and not I/O bound. Which means many small writing requests are scattered when exporting a large file.</p>
+<p>It also alleviates the remote system from times where writing is cancelled or otherwise fails.</p>
+<p>The staging area is where files are written next; the stage resides within the users local workspace and offers the end-user a chance to inspect previous successful and unsuccessful publishes. On a successful export from an application, this is where disparate files are assembled and injected with additional metadata</p>
+<p>Should this succeed, the are then moved to their final destination.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Hierarchy</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="usr1" src="https://cloud.githubusercontent.com/assets/2152766/18834482/07938972-83ee-11e6-92d0-1a989c2b54dd.png" /></td>
+<td align="left"><img alt="usr2" src="https://cloud.githubusercontent.com/assets/2152766/18834427/ab4b319c-83ed-11e6-8e72-2bf59e83b8d5.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Each directory will contain everything that did extract successfully, along with its metadata, for manual inspection and debugging.</p>
+<p><br></p>
+<h4 id="ls"><code class="codehilite"><span class="n">ls</span><span class="p">()</span></code></h4>
+<p>Communication with the filesystem is made through <code class="codehilite"><span class="n">ls</span><span class="p">()</span></code>.</p>
+<p><code class="codehilite"><span class="n">ls</span><span class="p">()</span></code> returns available assets - relative the currently registered root and silo directories - in the form of JSON-compatible dictionaries. Each dictionary is strictly formatted according to four distinct <a href="https://en.wikipedia.org/wiki/Database_schema">"schemas"</a>.</p>
+<p><strong>Example</strong></p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">mindbender</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">api</span><span class="o">.</span><span class="n">ls</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;subsets&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">version</span> <span class="ow">in</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;versions&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">representation</span> <span class="ow">in</span> <span class="n">version</span><span class="p">[</span><span class="s2">&quot;representations&quot;</span><span class="p">]:</span>
+                <span class="k">pass</span>
+</pre></div>
+
+<p>See below for a full list of members.</p>
+<p><br></p>
+<h2 id="schema">Schema</h2>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/2152766/22086121/8c037080-ddd7-11e6-9149-439203c32c6b.png" /></p>
+<p>Available schemas are organised hierarchically, with the former containing the latter.</p>
+<ul>
+<li><a href="#assetjson"><code class="codehilite"><span class="n">asset</span><span class="p">.</span><span class="n">json</span></code></a></li>
+<li><a href="#subsetjson"><code class="codehilite"><span class="n">subset</span><span class="p">.</span><span class="n">json</span></code></a><ul>
+<li><a href="#versionjson"><code class="codehilite"><span class="k">version</span><span class="p">.</span><span class="n">json</span></code></a><ul>
+<li><a href="#representationjson"><code class="codehilite"><span class="n">representation</span><span class="p">.</span><span class="n">json</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h4 id="assetjson"><code class="codehilite"><span class="n">asset</span><span class="p">.</span><span class="n">json</span></code></h4>
+<p>A part of a PROJECT, such as a Character or Shot.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">name</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Name of directory</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">subsets</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">list</span></code></td>
+<td align="left">0 or more <a href="#subsetjson"><code class="codehilite"><span class="n">subset</span><span class="p">.</span><span class="n">json</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="subsetjson"><code class="codehilite"><span class="n">subset</span><span class="p">.</span><span class="n">json</span></code></h4>
+<p>A part of an ASSET, such as a model or a rig.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">name</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Name of directory</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">versions</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">list</span></code></td>
+<td align="left">0 or more <a href="#versionjson"><code class="codehilite"><span class="k">version</span><span class="p">.</span><span class="n">json</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h4 id="versionjson"><code class="codehilite"><span class="k">version</span><span class="p">.</span><span class="n">json</span></code></h4>
+<p>An immutable iteration of a SUBSET.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">version</span></code></td>
+<td align="left"><code class="codehilite"><span class="nb">int</span></code></td>
+<td align="left">Number of this VERSION</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">path</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Unformatted path, e.g. <code class="codehilite"><span class="err">{</span><span class="n">root</span><span class="err">}</span><span class="o">/</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">time</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">ISO formatted, file-system compatible time.</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">author</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">User logged on to the machine at time of publish.</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">source</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Original file from which this VERSION was made.</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">representations</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">list</span></code></td>
+<td align="left">0 or more <a href="#representationjson"><code class="codehilite"><span class="n">representation</span><span class="p">.</span><span class="n">json</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p>Versions are immutable, in that they never change once made. This is in stark contrast to mutable versions which is when one version may be "updated" such that the same file now contains new information.</p>
+<p><br></p>
+<h4 id="representationjson"><code class="codehilite"><span class="n">representation</span><span class="p">.</span><span class="n">json</span></code></h4>
+<p>One of many representations of a VERSION.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">format</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">File extension</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">path</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Unformatted path</td>
+</tr>
+</tbody>
+</table>
+<p>Think of a representation as one way of storing the same set of data on disk. For example, an image may be stored as both PNG and JPEG. Different files, same data. It could also be stored as a description. <em>"A picture of my computer."</em> Much less information is ultimately stored, but it is nonetheless the exact same original data in a different (albeit lossy) representation. The image could also be represented by a feeling (warm, mystical) or a spoken word (muah!).</p>
+<p>Representation are very powerful and lie at the heart of assets that are more than just a single file.</p>
+<p>As a practical example, a Look is stored as both an MA scene file and a JSON. The JSON stores the shader relationships, whereas the MA file stores the actual shaers. Same data, different representations.</p>
+<h4 id="containerjson"><code class="codehilite"><span class="n">container</span><span class="p">.</span><span class="n">json</span></code></h4>
+<p>An imported VERSION, as yielded from <code class="codehilite"><span class="n">api</span><span class="p">.</span><span class="n">registered_host</span><span class="p">().</span><span class="n">ls</span><span class="p">()</span></code>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">schema</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Contains <code class="codehilite"><span class="ss">&quot;mindbender-core:container-1.0&quot;</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">name</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Pipeline name of this container</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">objectName</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Internal name used in an application</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">asset</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Source ASSET of this container</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">subset</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Source SUBSET of this container</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">version</span></code></td>
+<td align="left"><code class="codehilite"><span class="nb">int</span></code></td>
+<td align="left">Source VERSION of this container</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">path</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Path to loaded VERSION</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">source</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Absolute path to original scene</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">author</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Author of VERSION</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="mindbender-api">Mindbender API</h3>
+<p>Mindbender provides a <em>stateful</em> API.</p>
+<p>State is set and modified by calling any of the exposed registration functions, prefixed <code class="codehilite"><span class="n">register_</span><span class="o">*</span></code>.</p>
+<p><br></p>
+<p>Public members of <code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">api</span></code></p>
+<table>
+<thead>
+<tr>
+<th align="left">Member</th>
+<th align="left">Returns</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">install</span><span class="p">(</span><span class="k">host</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Install Mindbender into the current interpreter session</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">uninstall</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Revert installation</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ls</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">generator</span></code></td>
+<td align="left">List available assets, relative <code class="codehilite"><span class="n">root</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">registered_root</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Absolute path to current working directory</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">format_staging_dir</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Return absolute path or staging directory relative arguments</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">format_shared_dir</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Return absolute path of shared directory</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">format_version</span><span class="p">(</span><span class="k">version</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Return file-system compatible string of <code class="codehilite"><span class="k">version</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">find_latest_version</span><span class="p">(</span><span class="n">versions</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="nb">int</span></code></td>
+<td align="left">Given a series of string-formatted versions, return the latest one</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">parse_version</span><span class="p">(</span><span class="k">version</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Given an arbitrarily formatted string, return version number</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">register_root</span><span class="p">(</span><span class="n">root</span><span class="p">)</span></code></td>
+<td align="left"></td>
+<td align="left">Register currently active root</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">register_host</span><span class="p">(</span><span class="k">host</span><span class="p">)</span></code></td>
+<td align="left"></td>
+<td align="left">Register currently active host</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">register_plugins</span><span class="p">()</span></code></td>
+<td align="left"></td>
+<td align="left">Register plug-ins bundled with Pyblish Mindbender</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">deregister_plugins</span><span class="p">()</span></code></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">registered_host</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="k">module</span></code></td>
+<td align="left">Return currently registered host</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">registered_families</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">list</span></code></td>
+<td align="left">Return currently registered families</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">registered_data</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">list</span></code></td>
+<td align="left">Return currently registered data</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">registered_root</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Return currently registered root</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h3 id="host-api">Host API</h3>
+<p>A host must implement the following members.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Member</th>
+<th align="left">Returns</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">ls</span><span class="p">()</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">generator</span></code></td>
+<td align="left">List loaded assets</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">create</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="k">options</span><span class="o">=</span><span class="k">None</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="n">str</span></code></td>
+<td align="left">Build fixture for outgoing data (see <a href="">instance</a>), returns instance.</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">load</span><span class="p">(</span><span class="n">asset</span><span class="p">,</span> <span class="n">subset</span><span class="p">,</span> <span class="k">version</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">representation</span><span class="o">=</span><span class="k">None</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="k">None</span></code></td>
+<td align="left">Import external data into <a href="">container</a></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="k">update</span><span class="p">(</span><span class="n">container</span><span class="p">,</span> <span class="k">version</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="k">None</span></code></td>
+<td align="left">Update an existing container</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">remove</span><span class="p">(</span><span class="n">container</span><span class="p">)</span></code></td>
+<td align="left"><code class="codehilite"><span class="k">None</span></code></td>
+<td align="left">Remove an existing container</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Information hierarchy</strong></p>
+<p>Loaded data is stored in a <code class="codehilite"><span class="n">container</span></code>. A container hosts a loaded asset along with metadata used to associate assets that use other assets, such as a Wheel asset used in a Car asset.</p>
+<p><img alt="Host data relationship" src="https://cloud.githubusercontent.com/assets/2152766/18905784/aa6a3d5c-855c-11e6-9843-b24ebd23c4ac.png" /></p>
+<p><strong>Id</strong></p>
+<p>Internally, Pyblish instances and containers are distinguished from native content via an "id". For example, in Maya, the <code class="codehilite"><span class="n">id</span></code> is a user-defined attribute.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">pyblish</span><span class="p">.</span><span class="n">mindbender</span><span class="p">.</span><span class="n">container</span></code></td>
+<td align="left">Unit of incoming data</td>
+<td align="left"><code class="codehilite"><span class="p">...:</span><span class="n">model_GRP</span></code>, <code class="codehilite"><span class="p">...:</span><span class="n">rig_GRP</span></code></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">pyblish</span><span class="p">.</span><span class="n">mindbender</span><span class="p">.</span><span class="n">instance</span></code></td>
+<td align="left">Unit of outgoing data</td>
+<td align="left"><code class="codehilite"><span class="n">Strange_model_default</span></code></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<br></p>
+<h2 id="contract">Contract</h2>
+<p>Mindbender defines these families.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Family</th>
+<th align="left">Definition</th>
+<th align="left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">model</span></code></td>
+<td align="left">Geometry with deformable topology</td>
+<td align="left"><a href="#avalonmodel">Spec</a></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">rig</span></code></td>
+<td align="left">An articulated <code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">model</span></code> for animators</td>
+<td align="left"><a href="#avalonrig">Spec</a></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">animation</span></code></td>
+<td align="left">Pointcached <code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">rig</span></code> for rendering</td>
+<td align="left"><a href="#avalonanimation">Spec</a></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">lookdev</span></code></td>
+<td align="left">Shaded <code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">model</span></code> for rendering</td>
+<td align="left"><a href="#avalonlookdev">Spec</a></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314853/4c84d5e6-2843-11e7-9b66-4c4506c89320.png"/></p>
+<h3 id="mindbendermodel"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">model</span></code></h3>
+<p>A generic representation of geometry.</p>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Workflow</strong></p>
+<ol>
+<li>Create a new <code class="codehilite"><span class="n">Model</span></code> INSTANCE.</li>
+<li>Add the <code class="codehilite"><span class="n">ROOT</span></code> group</li>
+<li>Publish</li>
+</ol>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Target Audience</strong></p>
+<ul>
+<li>Texturing</li>
+<li>Rigging</li>
+<li>Final render</li>
+</ul>
+<p><img alt="req" src="https://cloud.githubusercontent.com/assets/2152766/18576838/f6da783e-7bdc-11e6-9935-78e1a6438e44.png" /> <strong>Requirements</strong></p>
+<ul>
+<li>All DAG nodes must be parented to a single top-level transform</li>
+<li>Normals must be unlocked</li>
+</ul>
+<p><img alt="dat" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /> <strong>Data</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Pretty printed name in graphical user interfaces</li>
+</ul>
+<p><img alt="set" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /> <strong>Sets</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">geometry_SEL</span> <span class="p">(</span><span class="n">geometry</span><span class="p">)</span></code>: Meshes suitable for rigging</li>
+<li><code class="codehilite"><span class="n">aux_SEL</span> <span class="p">(</span><span class="k">any</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Auxilliary meshes for e.g. fast preview, collision geometry</li>
+</ul>
+<p><br>
+<br>
+<br>
+<br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314863/87719ab8-2843-11e7-8509-1328f0847437.png"/></p>
+<h3 id="mindbenderrig"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">rig</span></code></h3>
+<p>The <code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">rig</span></code> contains the necessary implementation and interface for animators to animate. </p>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Workfow</strong></p>
+<ol>
+<li>Add the <code class="codehilite"><span class="n">ROOT</span></code> group</li>
+<li>Add animatable controllers to an <code class="codehilite"><span class="n">objectSet</span></code> called <code class="codehilite"><span class="n">controls_SET</span></code></li>
+<li>Add cachable meshes to an <code class="codehilite"><span class="n">objectSet</span></code> called <code class="codehilite"><span class="n">out_SET</span></code></li>
+</ol>
+<p>Publishing.</p>
+<ol>
+<li>Create a new <code class="codehilite"><span class="n">Rig</span></code> INSTANCE</li>
+<li>Add <code class="codehilite"><span class="n">ROOT</span></code></li>
+<li>Add <code class="codehilite"><span class="n">controls_SET</span></code></li>
+<li>Add <code class="codehilite"><span class="n">out_SET</span></code></li>
+<li>Publish</li>
+</ol>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Target Audience</strong></p>
+<ul>
+<li>Animation</li>
+</ul>
+<p><img alt="req" src="https://cloud.githubusercontent.com/assets/2152766/18576838/f6da783e-7bdc-11e6-9935-78e1a6438e44.png" /> <strong>Requirements</strong></p>
+<ul>
+<li>All DAG nodes must be parented to a single top-level transform</li>
+<li>Must contain an <code class="codehilite"><span class="n">objectSet</span></code> for controls and cachable geometry</li>
+</ul>
+<p><img alt="dat" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /> <strong>Data</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Pretty printed name in graphical user interfaces</li>
+</ul>
+<p><img alt="set" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /> <strong>Sets</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">in_SEL</span> <span class="p">(</span><span class="n">geometry</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Geometry consumed by this rig</li>
+<li><code class="codehilite"><span class="n">out_SEL</span> <span class="p">(</span><span class="n">geometry</span><span class="p">)</span></code>: Geometry produced by this rig</li>
+<li><code class="codehilite"><span class="n">controls_SEL</span> <span class="p">(</span><span class="k">transforms</span><span class="p">)</span></code>: All animatable controls</li>
+<li><code class="codehilite"><span class="n">resources_SEL</span> <span class="p">(</span><span class="k">any</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Nodes that reference an external file</li>
+</ul>
+<p><br>
+<br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314862/77be3eb4-2843-11e7-9a5f-9a1509751aa6.png"/></p>
+<h3 id="mindbenderanimation"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">animation</span></code></h3>
+<p>Point positions and normals represented as one Alembic file.</p>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Workflow</strong></p>
+<p>The animator workflow is simplified by the fact that an INSTANCE is automatically created upon loading a rig.</p>
+<ol>
+<li>Load rig</li>
+<li>Publish</li>
+</ol>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Target Audience</strong></p>
+<ul>
+<li>Lighting</li>
+<li>FX</li>
+<li>Cloth</li>
+<li>Hair</li>
+</ul>
+<p><img alt="req" src="https://cloud.githubusercontent.com/assets/2152766/18576838/f6da783e-7bdc-11e6-9935-78e1a6438e44.png" /> <strong>Requirements</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<p><img alt="dat" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /> <strong>Data</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Pretty printed name in graphical user interfaces</li>
+</ul>
+<p><img alt="set" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /> <strong>Sets</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<p><br>
+<br></p>
+<p><img class="ornament" src="https://cloud.githubusercontent.com/assets/2152766/25314862/77be3eb4-2843-11e7-9a5f-9a1509751aa6.png"/></p>
+<h3 id="mindbenderlookdev"><code class="codehilite"><span class="n">mindbender</span><span class="p">.</span><span class="n">lookdev</span></code></h3>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Workflow</strong></p>
+<p>Shaders are exported relative the meshes in an INSTANCE.</p>
+<ol>
+<li>Create a new <code class="codehilite"><span class="n">Look</span></code> INSTANCE</li>
+<li>Add the <code class="codehilite"><span class="k">transform</span></code> of each shaded mesh</li>
+<li>Publish</li>
+</ol>
+<p><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /> <strong>Target Audience</strong></p>
+<ul>
+<li>Lighting</li>
+</ul>
+<p><img alt="req" src="https://cloud.githubusercontent.com/assets/2152766/18576838/f6da783e-7bdc-11e6-9935-78e1a6438e44.png" /> <strong>Requirements</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<p><img alt="dat" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /> <strong>Data</strong></p>
+<ul>
+<li><code class="codehilite"><span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span></code>: Pretty printed name in graphical user interfaces</li>
+</ul>
+<p><img alt="set" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /> <strong>Sets</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<p><br>
+<br>
+<br></p>
+<p><strong>Legend</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Title</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="aud" src="https://cloud.githubusercontent.com/assets/2152766/18576837/f6d9c970-7bdc-11e6-8899-6eb8686b4173.png" /></td>
+<td align="left"><strong>Target Audience</strong></td>
+<td align="left">Who is the end result of this family intended for?</td>
+</tr>
+<tr>
+<td align="left"><img alt="req" src="https://cloud.githubusercontent.com/assets/2152766/18576838/f6da783e-7bdc-11e6-9935-78e1a6438e44.png" /></td>
+<td align="left"><strong>Requirements</strong></td>
+<td align="left">What is expected of this ASSET before it passes the tests?</td>
+</tr>
+<tr>
+<td align="left"><img alt="dat" src="https://cloud.githubusercontent.com/assets/2152766/18576836/f6ca19e4-7bdc-11e6-9ef8-3614474c58bb.png" /></td>
+<td align="left"><strong>Data</strong></td>
+<td align="left">End-user configurable options</td>
+</tr>
+<tr>
+<td align="left"><img alt="set" src="https://cloud.githubusercontent.com/assets/2152766/18576835/f6b80574-7bdc-11e6-8237-1227f779815a.png" /></td>
+<td align="left"><strong>Sets</strong></td>
+<td align="left">Collection of specific items for publishing or use further down the pipeline.</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2.0/" title=" " class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                 
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://getavalon.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/getavalon" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://linkedin.com/in/marcusottosson" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascript/application.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-101505233-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
